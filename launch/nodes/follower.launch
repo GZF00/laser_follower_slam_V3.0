@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- follower节点信息 -->
+  <node name='follower' pkg="laser_follower_slam" type="follower.py" output="screen">
+    <!-- maxSpeed：最大速度（角速度和线速度） -->
+    <param name='maxSpeed' value='1.5' type='double' />
+    <!-- targetDist：目标距离 -->
+    <param name='targetDist' value='0.3' type='double' />
+    <!-- PID_controller：PID参数 -->
+    <rosparam ns='PID_controller' command='load' file='$(find laser_follower_slam)/parameters/PID_param.yaml' />
+  </node>
+
+</launch>

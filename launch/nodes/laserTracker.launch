@@ -1,0 +1,18 @@
+<launch>
+
+  <!-- laser_tracker节点信息 -->
+  <node name='laser_tracker' pkg="laser_follower_slam" type="laserTracker.py" output="screen">
+    <!-- diff_max:差分比较值：差分值大于diff_max则判断为一个边界 -->
+    <param name="diff_max" value="0.5" type="double" />
+    <!-- object_min:跟随物体宽度最小值 -->
+    <param name="object_min" value="0.07" type="double" />
+    <!-- object_max:跟随物体宽度最大值 -->
+    <param name="object_max" value="0.12" type="double" />
+    <!-- max_tracker_distance:最大跟随距离 -->
+    <param name="max_tracker_distance" value="3.00" type="double" />
+    <!-- filter_distance:滤波器阈值 -->
+    <param name="filter_distance" value="2.00" type="double" />
+
+  </node>
+
+</launch>
